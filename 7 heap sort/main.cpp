@@ -37,7 +37,7 @@ void printArray(int arr[], int n){
 
 int main(){
     int range = 1000;
-    while(range < 10000){
+    while(range < 11000){
         int n = range; //size of array
         int arr[n];
         for(int i=0; i<n; i++){
