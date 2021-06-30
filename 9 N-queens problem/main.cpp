@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
   
-#define N 12
+#define N 15
 
 void printSolution(int board[N][N]){ 
     for (int i = 0; i < N; i++) { 
@@ -58,17 +58,19 @@ bool solveNQUtil(int board[N][N], int col){
     return false; 
 } 
 bool solveNQ(){ 
-    int board[N][N] = { { 0, 0, 0, 0 }, 
-                        { 0, 0, 0, 0 }, 
-                        { 0, 0, 0, 0 }, 
-                        { 0, 0, 0, 0 } }; 
+    int board[N][N];
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            board[i][j] = 0;
+        }
+    }
   
     if (solveNQUtil(board, 0) == false) { 
         printf("Solution does not exist"); 
         return false; 
     } 
   
-    // printSolution(board); 
+    printSolution(board); 
     return true; 
 } 
   
